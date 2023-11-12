@@ -16,6 +16,7 @@
 		A0837F3F2AFFF244004927F3 /* SearchAndFilterBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0837F3E2AFFF244004927F3 /* SearchAndFilterBar.swift */; };
 		A0837F412B0021EC004927F3 /* ListingDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0837F402B0021EC004927F3 /* ListingDetailView.swift */; };
 		A0837F442B0022F8004927F3 /* ListingImageCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0837F432B0022F8004927F3 /* ListingImageCarouselView.swift */; };
+		A0837F462B015FBA004927F3 /* DestinationSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0837F452B015FBA004927F3 /* DestinationSearchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		A0837F3E2AFFF244004927F3 /* SearchAndFilterBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAndFilterBar.swift; sourceTree = "<group>"; };
 		A0837F402B0021EC004927F3 /* ListingDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingDetailView.swift; sourceTree = "<group>"; };
 		A0837F432B0022F8004927F3 /* ListingImageCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingImageCarouselView.swift; sourceTree = "<group>"; };
+		A0837F452B015FBA004927F3 /* DestinationSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationSearchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 			children = (
 				A0837F3A2AFFE40D004927F3 /* ExploreView.swift */,
 				A0837F3E2AFFF244004927F3 /* SearchAndFilterBar.swift */,
+				A0837F452B015FBA004927F3 /* DestinationSearchView.swift */,
 			);
 			path = Explore;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0837F442B0022F8004927F3 /* ListingImageCarouselView.swift in Sources */,
+				A0837F462B015FBA004927F3 /* DestinationSearchView.swift in Sources */,
 				A0837F222AFFE26D004927F3 /* ContentView.swift in Sources */,
 				A0837F3D2AFFE67D004927F3 /* ListingItemView.swift in Sources */,
 				A0837F3B2AFFE40D004927F3 /* ExploreView.swift in Sources */,
