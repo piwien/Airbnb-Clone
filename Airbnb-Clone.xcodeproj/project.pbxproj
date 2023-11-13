@@ -25,6 +25,7 @@
 		A0837F542B024CEA004927F3 /* DeveloperPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0837F532B024CEA004927F3 /* DeveloperPreview.swift */; };
 		A0837F592B0252A6004927F3 /* ExploreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0837F582B0252A6004927F3 /* ExploreViewModel.swift */; };
 		A0837F5B2B0253B9004927F3 /* ExploreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0837F5A2B0253B9004927F3 /* ExploreService.swift */; };
+		A0837F5D2B02733C004927F3 /* Regions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0837F5C2B02733C004927F3 /* Regions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		A0837F532B024CEA004927F3 /* DeveloperPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperPreview.swift; sourceTree = "<group>"; };
 		A0837F582B0252A6004927F3 /* ExploreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewModel.swift; sourceTree = "<group>"; };
 		A0837F5A2B0253B9004927F3 /* ExploreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreService.swift; sourceTree = "<group>"; };
+		A0837F5C2B02733C004927F3 /* Regions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				A0837F532B024CEA004927F3 /* DeveloperPreview.swift */,
+				A0837F5C2B02733C004927F3 /* Regions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				A0837F222AFFE26D004927F3 /* ContentView.swift in Sources */,
 				A0837F3D2AFFE67D004927F3 /* ListingItemView.swift in Sources */,
 				A0837F592B0252A6004927F3 /* ExploreViewModel.swift in Sources */,
+				A0837F5D2B02733C004927F3 /* Regions.swift in Sources */,
 				A0837F3B2AFFE40D004927F3 /* ExploreView.swift in Sources */,
 				A0837F522B0244C8004927F3 /* Listing.swift in Sources */,
 				A0837F4C2B0228A2004927F3 /* WishlistView.swift in Sources */,
