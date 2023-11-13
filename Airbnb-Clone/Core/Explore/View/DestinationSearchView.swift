@@ -15,11 +15,11 @@ enum DestinationSearchOptions {
 
 struct DestinationSearchView: View {
     @Binding var show: Bool
-    @State private var destination = ""
     @State private var selectedOption: DestinationSearchOptions = .location
     @State private var startDate = Date()
     @State private var endDate = Date()
     @State private var guestnum: Int = 0
+    @ObservedObject var viewModel: ExploreViewModel
     
     var body: some View {
         
@@ -29,6 +29,7 @@ struct DestinationSearchView: View {
                 Button(action: {
                     withAnimation(.snappy) {
                         show.toggle()
+                        viewModel.updateListingsForLocation()
                     }
                 }, label: {
                     Image(systemName: "xmark.circle")
@@ -38,9 +39,10 @@ struct DestinationSearchView: View {
                 
                 Spacer()
                 
-                if !destination.isEmpty {
+                if !viewModel.searchLocation.isEmpty {
                     Button(action: {
-                        destination = ""
+                        viewModel.searchLocation = ""
+                        viewModel.updateListingsForLocation()
                     }, label: {
                         Text("Clear")
                     })
@@ -50,7 +52,7 @@ struct DestinationSearchView: View {
                 }
             }
             .padding()
-
+            
             VStack(alignment: .leading) {
                 if selectedOption == .location {
                     Text("Where to?")
@@ -61,8 +63,12 @@ struct DestinationSearchView: View {
                         Image(systemName: "magnifyingglass")
                             .imageScale(.small)
                         
-                        TextField("Search destination", text: $destination)
+                        TextField("Search destination", text: $viewModel.searchLocation)
                             .font(.subheadline)
+                            .onSubmit {
+                                viewModel.updateListingsForLocation()
+                                show.toggle()
+                            }
                     }
                     .frame(height: 44)
                     .padding(.horizontal)
@@ -122,11 +128,11 @@ struct DestinationSearchView: View {
                             guard guestnum > 0 else { return }
                             guestnum -= 1
                         }
-
+                        
                     }
                 } else {
                     ExtractedView(title: "Who", description: "Add guests")
-
+                    
                 }
             }
             .modifier(DestinationViewModifier())
@@ -140,7 +146,7 @@ struct DestinationSearchView: View {
 }
 
 #Preview {
-    DestinationSearchView(show: .constant(false))
+    DestinationSearchView(show: .constant(false), viewModel: .init(service: ExploreService()))
 }
 
 struct DestinationViewModifier: ViewModifier {
