@@ -15,9 +15,17 @@ struct ListingDetailView: View {
     
     init(listing: Listing) {
         self.listing = listing
-        
-        let region = MKCoordinateRegion(center: listing.city == "Los Angeles" ? .losAngeles : .miami,
-                                        span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
+        let region: MKCoordinateRegion
+
+        if listing.city == "Los Angeles" {
+            region = MKCoordinateRegion(center: .losAngeles, span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
+        } else if listing.city == "Miami" {
+            region = MKCoordinateRegion(center: .miami, span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
+        } else if listing.city == "Manhattan" {
+            region = MKCoordinateRegion(center: .manhattan, span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
+        } else {
+            region = MKCoordinateRegion(center: .init(latitude: listing.latitude, longitude: listing.longitude), span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
+        }
         
         self._cameraPosition = State(initialValue: .region(region))
     }

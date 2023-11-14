@@ -43,7 +43,7 @@ struct ProfileView: View {
             //profile option
             VStack(spacing: 24) {
                 ProfileOptionView(iconName: "gear", text: "Settings")
-                ProfileOptionView(iconName: "gear", text: "Accessibility")
+                ProfileOptionView(iconName: "accessibility", text: "Accessibility")
                 ProfileOptionView(iconName: "questionmark.circle", text: "Visit the help center")
             }
             .padding(.vertical)
