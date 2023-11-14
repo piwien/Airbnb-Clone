@@ -50,7 +50,7 @@ struct ListingItemView: View {
                     Image(systemName: "star.fill")
                         .foregroundStyle(.yellow)
                     
-                    Text("\(listing.rating)")
+                    Text(String(format: "%.2f", listing.rating))
                         .foregroundStyle(.black)
                         .fontWeight(.semibold)
                         

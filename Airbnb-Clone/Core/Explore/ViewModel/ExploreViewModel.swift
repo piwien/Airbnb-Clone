@@ -29,6 +29,7 @@ class ExploreViewModel: ObservableObject {
     }
     
     func updateListingsForLocation() {
+        self.listings = listingsCopy
         let filteredListing = listings.filter({
             $0.city.lowercased() == searchLocation.lowercased() ||
             $0.state.lowercased() == searchLocation.lowercased()
